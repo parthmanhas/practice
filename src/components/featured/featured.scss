@@ -1,0 +1,56 @@
+.featured {
+    position: relative;
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .info {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        width: 500px;
+
+        span {
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            .icon {
+                height: 40px;
+                width: 40px;
+            }
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: 500;
+                margin-right: 10px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+    
+                &.play {
+                    color: var(--main-color);
+                    background-color: white;
+                }
+    
+                &.more {
+                    background-color: grey;
+                    color: white;
+                }
+            }
+    
+            .btn:hover {
+                filter: brightness(70%);
+            }
+        }
+    }
+}

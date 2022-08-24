@@ -49,6 +49,11 @@
                     display: none;
                     background-color: var(--main-color);
                     border-radius: 5px;
+                    .option {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
                 }
 
                 span {
