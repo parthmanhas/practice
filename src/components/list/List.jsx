@@ -54,10 +54,6 @@ const List = ({ props }) => {
       <div className="heading">Recently Added</div>
       <div className="wrapper">
         <div className="slider-container">
-          <ArrowBackIosOutlined
-            className="arrow left"
-            onClick={() => handleClick("left")}
-          />
           <div className="slider" ref={sliderWrapperRef} onTransitionEnd={handleTransitionEnd}>
             <div className="slider-items 5" style={{backgroundColor: 'green'}}>
               <ListItem />
@@ -116,12 +112,17 @@ const List = ({ props }) => {
               <ListItem />
             </div>
           </div>
-            
-          <ArrowForwardIosOutlined
-            className="arrow right"
-            onClick={() => handleClick("right")}
-          />
         </div>
+        <div className="arrow-container">
+            <ArrowBackIosOutlined
+              className="arrow left"
+              onClick={() => handleClick("left")}
+            />
+            <ArrowForwardIosOutlined
+              className="arrow right"
+              onClick={() => handleClick("right")}
+            />
+          </div>
       </div>
     </div>
   );
