@@ -1,8 +1,10 @@
 import './listItem.scss';
-
+import naruto from '../../assets/naruto-logo.png';
 const ListItem = (props) => {
   return (
-    <div className='listItem' style={{backgroundColor: props.color}}>ListItem</div>
+    <div className='listItem'>
+      <img src={naruto}></img>
+    </div>
   )
 }
 
