@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'sen';
+    src: local('sen'), url(./fonts/sen.regular.otf) format('opentype');
+}
+
+* {
+    font-family: 'sen';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
