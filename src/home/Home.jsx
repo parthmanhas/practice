@@ -1,9 +1,13 @@
+import Hero from "../components/hero/Hero";
 import Navbar from "../components/navbar/Navbar";
 
 const Home = () => {
-    return (
-        <Navbar />
-    );
-}
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
+};
 
-export default Home
+export default Home;
