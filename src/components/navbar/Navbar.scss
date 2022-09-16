@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #232536;
@@ -12,6 +12,7 @@
     .logo {
         font-size: xx-large;
         font-weight: 700;
+        margin-left: 5vw;
     }
 
     .nav-items {
