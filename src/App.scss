@@ -1,11 +1,21 @@
 @font-face {
     font-family: 'sen';
-    src: local('sen'), url(./fonts/sen.regular.otf) format('opentype');
+    src: local('sen'), url(./fonts/Sen-Regular.ttf);
+    font-weight: normal;
 }
 
+@font-face {
+    font-family: 'sen';
+    src: local('sen'), url(./fonts/Sen-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: local('sen'), url(./fonts/Inter.ttf);
+}
 * {
     font-family: 'sen';
-    font-weight: 400;
     font-size: 16px;
     line-height: 28px;
 }

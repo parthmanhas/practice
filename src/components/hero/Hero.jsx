@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className='hero'>
         <img src={heroImg} alt="img"></img>
-        {/* <div className="overlay"></div> */}
+        <div className="overlay"></div>
         <div className='hero-info'>
             <h2>POSTED ON <b>STARTUP</b></h2>
             <h1>Step-by-step guide to choosing great font pairs</h1>
