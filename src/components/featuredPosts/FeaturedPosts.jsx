@@ -4,9 +4,11 @@ import featuredPostImg from "../../static/images/featured-post.jpeg";
 
 const FeaturedPosts = () => {
   return (
-    <div className="container">
+    <div className="featured-container">
       <div className="featured">
-        <h2>Featured Posts</h2>
+        <div className="heading-container">
+          <h2>Featured Posts</h2>
+        </div>
         <div className="card-container">
           <div className="card">
             <div className="img-container">
@@ -33,9 +35,9 @@ const FeaturedPosts = () => {
         </div>
       </div>
       <div className="all-posts">
-        <div className="top-container">
+        <div className="heading-container">
           <h2>All Posts</h2>
-          <p>View All</p>
+          <p><span>View All</span></p>
         </div>
         <div className="post-container">
           <div className="post">
