@@ -1,0 +1,84 @@
+:root {
+    --purple: #592EA9;
+    --yellow: #FFD050;
+    --grey: #6D6E76
+}
+
+@font-face {
+    font-family: 'sen';
+    src: local('sen'), url(./fonts/Sen-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'sen';
+    src: local('sen'), url(./fonts/Sen-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: local('sen'), url(./fonts/Inter.ttf);
+}
+
+// * {
+//     outline: 1px solid #f00 !important;
+//   }
+* {
+    font-family: 'sen';
+    font-size: 16px;
+    line-height: 28px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.body-1 {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #6D6E76;
+}
+
+.body-2, .label-01 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.cap-1, .cap-03, .cap-04 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cap-2 {
+    font-size: 12px;
+    line-height: 16px;
+}
+
