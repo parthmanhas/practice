@@ -1,0 +1,26 @@
+.logos-container {
+    height: 20vh;
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .featured-in {
+        * {
+            margin: 0;
+            color: var(--medium-grey);
+            
+        }
+    }
+
+    .logo-wrapper {
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+
+        svg {
+            color: var(--dark-blue);
+        }
+    }
+}

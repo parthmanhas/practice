@@ -10,7 +10,7 @@
     .category-container {
         display: flex;
         box-sizing: border-box;
-        
+
         .category {
             border: 1px solid rgba(0, 0, 0, 0.1);
             margin: 10px;
@@ -20,15 +20,15 @@
                 padding-bottom: 0;
             }
             .icon > svg {
-                background-color: #FBF6EA;
+                background-color: #fbf6ea;
                 border-radius: 10px;
             }
 
             &:hover {
+                transition: all 0.3s;
                 background-color: var(--yellow);
                 cursor: pointer;
             }
         }
-       
     }
 }

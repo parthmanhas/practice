@@ -4,6 +4,8 @@ import FeaturedPosts from "../components/featuredPosts/FeaturedPosts";
 import AboutUs from "../components/aboutUs/AboutUs";
 import ChooseCatergory from "./chooseCategory/ChooseCatergory";
 import SpecialCategory from "./specialCategory/SpecialCategory";
+import Author from "./authors/Author";
+import Logos from "./logos/Logos";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <AboutUs />
       <ChooseCatergory />
       <SpecialCategory />
+      <Author />
+      <Logos />
     </>
   );
 };
