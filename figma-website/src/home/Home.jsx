@@ -6,6 +6,9 @@ import ChooseCatergory from "./chooseCategory/ChooseCatergory";
 import SpecialCategory from "./specialCategory/SpecialCategory";
 import Author from "./authors/Author";
 import Logos from "./logos/Logos";
+import Testimonials from "./testimonials/Testimonials";
+import JoinOurTeam from "./joinOurTeam/JoinOurTeam";
+import Footer from "./footer/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +21,9 @@ const Home = () => {
       <SpecialCategory />
       <Author />
       <Logos />
+      <Testimonials />
+      <JoinOurTeam />
+      <Footer />
     </>
   );
 };
