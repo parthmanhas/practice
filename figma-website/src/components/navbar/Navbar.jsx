@@ -8,7 +8,7 @@ const Navbar = () => {
         </div>
         <ul className='nav-items'>
             <li>Home</li>
-            <li>Blog</li>
+            <li><a href='blog'>Blog</a></li>
             <li>About Us</li>
             <li>Contact Us</li>
             <li><button>Subscribe</button></li>

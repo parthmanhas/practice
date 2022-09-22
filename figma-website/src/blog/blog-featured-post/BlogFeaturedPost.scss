@@ -1,0 +1,36 @@
+.blog-featured-post-container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--lavender);
+
+    .wrapper {
+        width: 90%;
+        padding: 64px;
+        height: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .left {
+            width: 40%;
+
+            span {
+                color: var(--purple);
+            }
+
+            button {
+                background-color: var(--yellow);
+                padding: 16px 48px;
+                font-family: "sen";
+                font-weight: 700;
+                border: 0;
+            }
+        }
+
+        .right {
+            width: 40%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
