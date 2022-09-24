@@ -1,0 +1,43 @@
+.all-posts-container {
+    width: 90vw;
+    margin: 0 5vw;
+    .top {
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .middle {
+        .post {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 32px 0;
+            .left {
+                width: 40%;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .right {
+                width: 55%;
+                span {
+                    color: var(--purple);
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            margin: 0 16px;
+        }
+
+        h4 {
+            color: var(--medium-grey);
+        }
+    }
+}

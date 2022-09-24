@@ -3,12 +3,12 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import FeaturedPosts from "./featuredPosts/FeaturedPosts";
 import AboutUs from "./aboutUs/AboutUs";
-import ChooseCatergory from "./chooseCategory/ChooseCatergory";
+import ChooseCatergory from "../components/chooseCategory/ChooseCatergory";
 import SpecialCategory from "./specialCategory/SpecialCategory";
 import Author from "./authors/Author";
 import Logos from "./logos/Logos";
 import Testimonials from "./testimonials/Testimonials";
-import JoinOurTeam from "./joinOurTeam/JoinOurTeam";
+import JoinOurTeam from "../components/joinOurTeam/JoinOurTeam";
 
 const Home = () => {
   return (
