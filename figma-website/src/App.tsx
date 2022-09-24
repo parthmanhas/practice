@@ -1,13 +1,14 @@
 import './App.scss';
 import Home from './home/Home';
 import Blog from './blog/Blog';
+import AboutUs from './about-us/AboutUs';
 
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
-import React from 'react';
+
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />
+  },
+  {
+    path: "/about-us",
+    element: <AboutUs />
   },
 ]);
 

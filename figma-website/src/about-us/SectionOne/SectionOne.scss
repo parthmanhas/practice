@@ -1,0 +1,94 @@
+.about-us--section-one-container {
+    height: 200vh;
+    width: 90vw;
+    margin: 0 5vw;
+    position: relative;
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .left {
+            width: 30%;
+            padding: 32px;
+            background-color: white;
+            transform: translateY(10%);
+        }
+        .right {
+            width: 30%;
+        }
+    }
+    .bottom {
+        height: 120vh;
+        .top {
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+            position: relative;
+            z-index: -99;
+            img {
+                width: 100%;
+            }
+            .numbers {
+                position: absolute;
+                display: flex;
+                background-color: var(--yellow);
+                bottom: 0;
+                left: 128px;
+                border-radius: 2px;
+
+                h1, p {
+                    margin: 0;
+                }
+
+                &--left {
+                    padding: 32px;
+                }
+
+                &--mid {
+                    padding: 32px;
+                }
+
+                &--right {
+                    padding: 32px;
+                }
+            }
+
+            .design {
+                position: absolute;
+                bottom: 0;
+                left: 128px;
+                display: flex;
+                width: 100%;
+                &--left {
+                    width: 30%;
+                    height: 20px;
+                    background-color: var(--purple);
+                }
+
+                &--right {
+                    width: 30%;
+                    height: 20px;
+                    background-color: var(--yellow);
+                }
+             }
+            
+        }
+
+        .bottom {
+            height: 60vh;
+            background-color: #F4F0F8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .left {
+                padding: 64px;
+                padding-right: 32px;;
+            }
+
+            .right {
+                padding: 64px;
+                padding-left: 32px;
+            }
+        }
+    }
+}
