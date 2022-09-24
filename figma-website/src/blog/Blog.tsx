@@ -6,12 +6,16 @@ import AllPosts from "./all-posts/AllPosts";
 import ChooseCatergory from "../components/chooseCategory/ChooseCatergory";
 import JoinOurTeam from "../components/joinOurTeam/JoinOurTeam";
 
+
+//mock data
+import { mockedBlogs } from "./mock-data/blog.mock";
+
 const Blog = () => {
   return (
     <>
       <Navbar />
       <BlogFeaturedPost />
-      <AllPosts />
+      <AllPosts posts={mockedBlogs} />
       <ChooseCatergory />
       <JoinOurTeam />
       <Footer />
