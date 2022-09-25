@@ -1,7 +1,7 @@
 import './App.scss';
-import Home from './home/Home';
-import Blog from './blog/Blog';
-import AboutUs from './about-us/AboutUs';
+import Home from './pages/home/Home';
+import Blog from './pages/blog/Blog';
+import AboutUs from './pages/about-us/AboutUs';
 
 import {
   createBrowserRouter,

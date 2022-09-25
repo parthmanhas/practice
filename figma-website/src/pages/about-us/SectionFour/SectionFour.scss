@@ -1,0 +1,64 @@
+.about-us--section-four-container {
+    height: 100vh;
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .top {
+        .left {
+            width: 100px;
+            height: 100px;
+            background-color: var(--purple);
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        .author {
+            padding: 32px;
+            margin: 16px;
+            width: 200px;
+            background-color: var(--light-grey);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-grow: 1;
+            .top {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .wrapper {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transform: translateY(-10%);
+                    }
+                }
+            }
+
+            .bottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                * {
+                    margin-bottom: 0;
+
+                }
+            }
+        }
+        .left {
+            width: 100px;
+            height: 100px;
+            background-color: var(--yellow);
+        }
+    }
+}
