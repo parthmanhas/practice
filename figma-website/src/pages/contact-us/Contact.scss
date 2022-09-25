@@ -1,0 +1,58 @@
+.contact-us-container {
+    height: 150vh;
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        width: 50%;
+        padding: 32px;
+        text-align: center;
+        * {
+            width: 100%;
+            margin: 16px 0;
+        }
+
+        input {
+            height: 64px;
+            padding: 0 16px;
+        }
+
+        textarea {
+            padding: 16px;
+            height: 128px;
+        }
+
+        button {
+            width: 105%;
+            padding: 16px 32px;
+            background-color: var(--yellow);
+            border: 0;
+            font-weight: 700;
+        }
+        .contact-box {
+            display: flex;
+            background-color: var(--purple);
+            width: 100%;
+            color: white;
+            border-radius: 3px;
+            padding: 16px;
+            * {
+                margin: 0;
+            }
+            * > hr {
+                margin: 32px 0;
+                width: 90%;
+            }
+            .left {
+                width: 50%;
+            }
+            .right {
+                width: 50%;
+            }
+        }
+    }
+}
