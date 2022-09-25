@@ -1,0 +1,26 @@
+.top-background {
+    position: absolute;
+    height: 25vh;
+    width: 100%;
+    background-color: #F4F0F8;
+    z-index: -1;
+}
+
+.privacy-policy-container {
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    justify-content: center;
+    .wrapper {
+        width: 50%;
+        .top {
+            height: 20vh;
+            text-align: center;
+        }
+
+        .bottom {
+            margin-bottom: 64px;
+        }
+    }
+    
+}
