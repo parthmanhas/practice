@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import ContactUs from "./pages/contact-us/ContactUs";
 import PrivacyPolicy from './pages/privacy-policy/PrivacyPolicy';
 import BlogPost from "./components/blog-post/BlogPost";
+import Categories from "./pages/categories/Categories";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/blog-post",
     element: <BlogPost blogPost={{}} recommendations={[]} blogPostAuthor={{}}/>,
+  },
+  {
+    path: "/categories",
+    element: <Categories categoryPosts={[]} categories={['Startup', 'Business', 'Economy', 'Technology']} tags={['Business', 'Experience', 'Technology', 'Screen', 'Marketing', 'Life']}/>,
   },
 ]);
 
