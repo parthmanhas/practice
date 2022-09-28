@@ -1,0 +1,97 @@
+.author-details-container {
+    position: relative;
+    .author-info-background {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-color: #F4F0F8;
+    }
+    .author-info {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 15vw;
+        position: relative;
+
+        .author-info-top {
+            display: flex;
+            width: 100%;
+            .left {
+                overflow: hidden;
+                background-color: aqua;
+                width: 30%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 32px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .right {
+                width: 70%;
+            }
+        }
+
+        .author-info-bottom {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            display: flex;
+            .yellow {
+                // position: absolute;
+                height: 20px;
+                width: 40%;
+                background-color: var(--yellow);
+                bottom: 0;
+            }
+            .purple {
+                // position: absolute;
+                height: 20px;
+                width: 60%;
+                background-color: var(--purple);
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    .author-posts {
+        margin: 0 15vw;
+        .top {
+        }
+        .bottom {
+            padding-bottom: 32px;
+            .post {
+                display: flex;
+                .left {
+                    width: 50%;
+                    height: 350px;
+                    overflow: hidden;
+                    margin: 16px;
+                    margin-left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .right {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 50%;
+
+                    * {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
