@@ -9,6 +9,7 @@ import Author from "./authors/Author";
 import Logos from "./logos/Logos";
 import Testimonials from "./testimonials/Testimonials";
 import JoinOurTeam from "../../components/joinOurTeam/JoinOurTeam";
+import { authorsMock } from './Home.mock';
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
       <AboutUs />
       <ChooseCatergory />
       <SpecialCategory />
-      <Author />
+      <Author authors={authorsMock}/>
       <Logos />
       <Testimonials />
       <JoinOurTeam />
