@@ -1,28 +1,28 @@
-import { CategoryPost } from "./Categories.interface";
+import { IPost } from "../../interface/App.interface";
 
-export const categoryPostsMock: CategoryPost[] = [
+export const categoryPostsMock: IPost[] = [
   {
-    imgUrl: "",
+    imageUrl: "",
     category: "Business",
-    postHeading: "Top 6 free website mockup tools 2022",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
+    heading: "Top 6 free website mockup tools 2022",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
   },
   {
-    imgUrl: "",
+    imageUrl: "",
     category: "Business",
-    postHeading: "Step-by-step guide to choosing great font pairs",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
+    heading: "Step-by-step guide to choosing great font pairs",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
   },
   {
-    imgUrl: "",
+    imageUrl: "",
     category: "Business",
-    postHeading: "Ten free foogle fonts that you should use",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
+    heading: "Ten free foogle fonts that you should use",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
   },
   {
-    imgUrl: "",
+    imageUrl: "",
     category: "Business",
-    postHeading: "What did I learn from doing 50+ design sprints?",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
+    heading: "What did I learn from doing 50+ design sprints?",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.",
   },
 ];

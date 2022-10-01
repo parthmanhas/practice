@@ -2,9 +2,11 @@ import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import './Categories.scss';
 import { categoryPostsMock } from './Categories.mock';
-import { CategoryPost } from './Categories.interface';
+import { useParams } from 'react-router-dom';
+import { IPost } from './../../interface/App.interface';
 
-const Categories = ({ categoryPosts, categories, tags }) => {
+const Categories = ({ categoryPosts, categories, tags }: {categoryPosts: IPost[], categories: string[], tags: string[]}) => {
+  const params = useParams();
   categoryPosts = categoryPostsMock;
   return (
     <>
@@ -12,21 +14,21 @@ const Categories = ({ categoryPosts, categories, tags }) => {
       <div className="top-background"></div>
       <div className="categories-container">
         <div className="top">
-          <h1>Business</h1>
+          <h1>{params.category}</h1>
           <p className='body-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-          <p className='cap-03'>BLOG &gt; BUSINESS</p>
+          <p className='cap-03'>BLOG &gt; {params.category}</p>
         </div>
         <div className="bottom">
           <div className="left">
-            {categoryPosts.map((post: CategoryPost) => (
+            {categoryPosts.map(post => (
               <div className="post">
                 <div className="post--left">
                   <img src={require('../../static/images/blog-featured-post.jpg')}></img>
                 </div>
                 <div className="post--right">
                   <p className='cap-1'>{post.category}</p>
-                  <h2>{post.postHeading}</h2>
-                  <p className='body-1'>{post.description}</p>
+                  <h2>{post.heading}</h2>
+                  <p className='body-1'>{post.content}</p>
                 </div>
               </div>
             ))}

@@ -1,20 +1,28 @@
-import { Author } from "./Home.interface";
+import { IAuthor } from "../../interface/App.interface";
 
-export const authorsMock: Author[] = [
-    {
-      name: 'Floyd Miled',
-      description: 'Content Writer @Company'
+export const authorsMock: IAuthor[] = [
+  {
+    name: "Floyd Miled",
+    description: {
+      short: "Content Writer @Company",
     },
-    {
-      name: 'Floyd Miled',
-      description: 'Content Writer @Company'
+  },
+  {
+    name: "Floyd Miled",
+    description: {
+      short: "Content Writer @Company",
     },
-    {
-      name: 'Floyd Miled',
-      description: 'Content Writer @Company'
+  },
+  {
+    name: "Floyd Miled",
+    description: {
+      short: "Content Writer @Company",
     },
-    {
-      name: 'Floyd Miled',
-      description: 'Content Writer @Company'
-    }
-  ]
+  },
+  {
+    name: "Floyd Miled",
+    description: {
+      short: "Content Writer @Company",
+    },
+  },
+];

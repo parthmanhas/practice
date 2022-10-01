@@ -5,7 +5,7 @@ import FeaturedPosts from "./featuredPosts/FeaturedPosts";
 import AboutUs from "./aboutUs/AboutUs";
 import ChooseCatergory from "../../components/chooseCategory/ChooseCatergory";
 import SpecialCategory from "./specialCategory/SpecialCategory";
-import Author from "./authors/Author";
+import Author from "./authors/Author.tsx";
 import Logos from "./logos/Logos";
 import Testimonials from "./testimonials/Testimonials";
 import JoinOurTeam from "../../components/joinOurTeam/JoinOurTeam";

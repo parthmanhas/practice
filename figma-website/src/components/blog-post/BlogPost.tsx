@@ -1,7 +1,7 @@
+import { IAuthor, IPost } from "../../interface/App.interface";
 import Footer from "../footer/Footer";
 import JoinOurTeam from "../joinOurTeam/JoinOurTeam";
 import Navbar from "../navbar/Navbar";
-import { BlogPostRecommendation } from "./BlogPost.interface";
 import {
   blogPostAuthorMock,
   blogPostMock,
@@ -9,10 +9,11 @@ import {
 } from "./BlogPost.mock";
 import "./BlogPost.scss";
 
-const BlogPost = ({ blogPost, recommendations, blogPostAuthor }) => {
+const BlogPost = ({ blogPost, recommendations, blogPostAuthor }: {blogPost: IPost, recommendations: IPost[], blogPostAuthor: IAuthor}) => {
   blogPost = blogPostMock;
   recommendations = blogRecommendationsMock;
   blogPostAuthor = blogPostAuthorMock;
+
   return (
     <>
       <Navbar />
@@ -25,7 +26,7 @@ const BlogPost = ({ blogPost, recommendations, blogPostAuthor }) => {
             </div>
             <div className="author-info">
               <h3>{blogPostAuthor.name}</h3>
-              <p className="body-1">Posted on {blogPostAuthor.date}</p>
+              <p className="body-1">Posted on {blogPost.authoredDate}</p>
             </div>
           </div>
           <div className="blog-info">
@@ -43,17 +44,16 @@ const BlogPost = ({ blogPost, recommendations, blogPostAuthor }) => {
 
         <h2>What to read next</h2>
         <div className="what-to-read-next">
-          {recommendations.map((post: BlogPostRecommendation) => (
+          {recommendations.map(post => (
             <div className="post">
-              <img
-                src={require("../../static/images/blog-post-recommendation.jpg")}
+              <img src={require("../../static/images/blog-post-recommendation.jpg")}
               ></img>
               <div className="post-content">
                 <p>
-                  By <span>{post.authorName}</span> | {post.date}
+                  By <span>{post.author.name}</span> | {post.authoredDate}
                 </p>
-                <h3>{post.postHeading}</h3>
-                <p className="body-1">{post.description}</p>
+                <h3>{post.heading}</h3>
+                <p className="body-1">{post.content}</p>
               </div>
             </div>
           ))}

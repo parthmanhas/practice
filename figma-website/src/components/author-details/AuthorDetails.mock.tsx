@@ -1,24 +1,26 @@
-import { AuthorDetail } from "./AuthorDetails.interface";
+import { IAuthorDetails } from "../../interface/App.interface";
 
-export const authorDetailsMock: AuthorDetail = {
+export const authorDetailsMock: IAuthorDetails = {
   author: {
     imgUrl: "",
     name: "Hey there, I’m Andrew Jonhson and welcome to my Blog",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    description: {
+      full: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    }
+      
   },
   posts: [
     {
-        imgUrl: '',
+        imageUrl: '',
         heading: 'Font sizes in UI design: The complete guide to follow',
         category: 'BUSINESS',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-        imgUrl: '',
+        imageUrl: '',
         heading: 'Font sizes in UI design: The complete guide to follow',
         category: 'BUSINESS',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
   ],
 };

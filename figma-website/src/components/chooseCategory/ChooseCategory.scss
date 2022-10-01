@@ -11,6 +11,10 @@
         display: flex;
         box-sizing: border-box;
 
+        a {
+            text-decoration: none;
+        }
+
         .category {
             border: 1px solid rgba(0, 0, 0, 0.1);
             margin: 10px;

@@ -1,23 +1,22 @@
+import { IPost } from "../../../interface/App.interface";
 import "./AllPosts.scss";
 
-import { Post } from "../Blog.interace";
-
-const AllPosts = ({ posts }) => {
+const AllPosts = ({ posts }: {posts: IPost[]}) => {
   return (
     <div className="all-posts-container">
       <div className="top">
         <h1>All Posts</h1>
       </div>
       <div className="middle">
-        {posts.map((post: Post) => (
+        {posts.map((post) => (
           <div className="post">
             <div className="left">
-              <img src={require(`../../../static/images/${post.imgUrl}`)} alt=""></img>
+              <img src={require(`../../../static/images/${post.imageUrl}`)} alt=""></img>
             </div>
             <div className="right">
               <span className="cap-1">{post.category}</span>
               <h2>{post.heading}</h2>
-              <p className="body-1">{post.description}</p>
+              <p className="body-1">{post.content}</p>
             </div>
           </div>
         ))}
