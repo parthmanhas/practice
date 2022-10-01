@@ -33,3 +33,8 @@ export interface IAuthorDetails {
     author?: IAuthor;
     posts?: IPost[]
 }
+
+export interface ITestimonials {
+    content: string;
+    author: IAuthor;
+}

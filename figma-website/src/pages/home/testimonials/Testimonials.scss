@@ -23,76 +23,89 @@
         flex-direction: column;
         justify-content: space-around;
 
-        .top {
+        position: relative;
 
+        .testimonial-wrapper {
+            overflow: hidden;
+            .testimonial-slider {
+                display: flex;
+                transition: all 0.2s;
+                .testimonial {
+                    min-width: 100%;
+                    .top {
+                    }
+
+                    .bottom {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .author {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            * {
+                                margin: 0;
+                            }
+                            .icon {
+                                height: 70px;
+                                width: 70px;
+                                overflow: hidden;
+                                border-radius: 50%;
+
+                                img {
+                                    transform: translateY(-10%);
+                                    width: 100%;
+                                }
+                            }
+
+                            .info {
+                                padding: 16px;
+                            }
+                        }
+                    }
+                }
+            }
         }
-
-        .bottom {
+        .arrows {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
 
-            .author {
+            .left-arrow {
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                * {
-                    margin: 0;
-                }
-                .icon {
-                    height: 70px;
-                    width: 70px;
-                    overflow: hidden;
-                    border-radius: 50%;
-                    
-                    img {
-                        transform: translateY(-10%);
-                        width: 100%;
-                    }
-                }
-
-                .info {
-                    padding: 16px;
+                margin-right: 10px;
+                transition: all 0.2s;
+                &:hover {
+                    height: 80px;
+                    width: 80px;
+                    color: white;
+                    background-color: black;
                 }
             }
 
-            .arrows {
+            .right-arrow {
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                .left-arrow {
-                    height: 50px;
-                    width: 50px;
-                    background-color: white;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-right: 10px;
-                    transition: all 0.2s;
-                    &:hover {
-                        height: 80px;
-                        width: 80px;
-                        color: white;
-                        background-color: black;
-                    }
-                }
-
-                .right-arrow {
-                    height: 50px;
-                    width: 50px;
-                    background-color: white;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: all 0.2s;
-                    &:hover {
-                        height: 80px;
-                        width: 80px;
-                        color: white;
-                        background-color: black;
-                    }
+                transition: all 0.2s;
+                &:hover {
+                    height: 80px;
+                    width: 80px;
+                    color: white;
+                    background-color: black;
                 }
             }
         }

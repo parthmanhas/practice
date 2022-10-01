@@ -3,8 +3,9 @@ import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import SocialWrapper from "../socialWrapper/SocialWrapper";
 import { useRef } from 'react';
+import { IAuthorDetails } from './../../interface/App.interface';
 
-const AuthorDetails = ({ authorDetail }) => {
+const AuthorDetails = ({ authorDetail }: {authorDetail: IAuthorDetails}) => {
 
   const bottomRef = useRef();
 
@@ -23,7 +24,7 @@ const AuthorDetails = ({ authorDetail }) => {
             </div>
             <div className="right">
               <h1>{authorDetail.author.name}</h1>
-              <p className="body-1">{authorDetail.author.description}</p>
+              <p className="body-1">{authorDetail.author.description.short}</p>
               <SocialWrapper />
             </div>
           </div>
@@ -47,7 +48,7 @@ const AuthorDetails = ({ authorDetail }) => {
                 <div className="right">
                   <p className="cap-1">{post.category}</p>
                   <h2>{post.heading}</h2>
-                  <p className="body-1">{post.description}</p>
+                  <p className="body-1">{post.content}</p>
                 </div>
               </div>
             ))}

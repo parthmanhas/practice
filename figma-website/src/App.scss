@@ -88,3 +88,14 @@ h6 {
     line-height: 16px;
 }
 
+* {
+    button {
+        transition: all 0.2s;
+        &:hover {
+            background-color: #592EA9 !important;
+            color: white;
+            transform: scale(1.1);
+        }
+    }
+}
+

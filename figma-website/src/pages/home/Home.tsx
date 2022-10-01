@@ -11,6 +11,7 @@ import Testimonials from "./testimonials/Testimonials";
 import JoinOurTeam from "../../components/joinOurTeam/JoinOurTeam";
 import { authorsMock } from "./Home.mock";
 import { useRef } from "react";
+import { testimonialsMock } from "./testimonials/testimonials.mock";
 
 const Home = () => {
   const bottomRef = useRef();
@@ -25,7 +26,7 @@ const Home = () => {
       <SpecialCategory />
       <Author authors={authorsMock} />
       <Logos />
-      <Testimonials />
+      <Testimonials testimonials={testimonialsMock}/>
       <JoinOurTeam />
       <div ref={bottomRef}>
         <Footer />
