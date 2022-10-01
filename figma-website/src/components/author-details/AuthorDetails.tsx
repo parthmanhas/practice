@@ -2,11 +2,15 @@ import "./AuthorDetails.scss";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import SocialWrapper from "../socialWrapper/SocialWrapper";
+import { useRef } from 'react';
 
 const AuthorDetails = ({ authorDetail }) => {
+
+  const bottomRef = useRef();
+
   return (
     <>
-      <Navbar />
+      <Navbar scrollTo={bottomRef}/>
 
       <div className="author-details-container">
         <div className="author-info-background"></div>
@@ -51,7 +55,9 @@ const AuthorDetails = ({ authorDetail }) => {
         </div>
       </div>
 
-      <Footer />
+      <div ref={bottomRef}>
+        <Footer />
+      </div>
     </>
   );
 };

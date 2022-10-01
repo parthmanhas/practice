@@ -1,11 +1,15 @@
+import { useRef } from "react";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./Contact.scss";
 
 const ContactUs = () => {
+
+  const bottomRef = useRef();
+
   return (
     <>
-      <Navbar />
+      <Navbar scrollTo={bottomRef}/>
       <div className="contact-us-container">
         <div className="wrapper">
           <p className="cap-03">Contact us</p>
@@ -36,7 +40,9 @@ const ContactUs = () => {
           <button>Send Message</button>
         </div>
       </div>
-      <Footer />
+      <div ref={bottomRef}>
+        <Footer />
+      </div>
     </>
   );
 };

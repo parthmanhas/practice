@@ -8,16 +8,22 @@ import JoinOurTeam from "../../components/joinOurTeam/JoinOurTeam";
 
 //mock data
 import { mockedBlogs } from "./blog.mock";
+import { useRef } from "react";
 
 const Blog = () => {
+
+  const bottomRef = useRef();
+
   return (
     <>
-      <Navbar />
+      <Navbar scrollTo={bottomRef}/>
       <BlogFeaturedPost />
       <AllPosts posts={mockedBlogs} />
       <ChooseCatergory />
       <JoinOurTeam />
-      <Footer />
+      <div ref={bottomRef}>
+        <Footer />
+      </div>
     </>
   );
 };

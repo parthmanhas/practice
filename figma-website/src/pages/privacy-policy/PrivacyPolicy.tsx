@@ -1,11 +1,15 @@
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./PrivacyPolicy.scss";
+import { useRef } from 'react';
 
 const PrivacyPolicy = () => {
+
+  const bottomRef = useRef();
+
   return (
     <>
-      <Navbar />
+      <Navbar scrollTo={bottomRef}/>
       <div className="top-background"></div>
       <div className="privacy-policy-container">
         <div className="wrapper">
@@ -67,7 +71,9 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div ref={bottomRef}>
+        <Footer />
+      </div>
     </>
   );
 };

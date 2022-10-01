@@ -1,8 +1,8 @@
 import "./Footer.scss";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <div className="footer-container">
+    <div ref={props.ref} className="footer-container">
       <div className="top">
         <div className="left">
           <h2>Subscribe to our news letter to get latest updates and news</h2>

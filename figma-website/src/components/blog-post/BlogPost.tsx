@@ -8,15 +8,18 @@ import {
   blogRecommendationsMock,
 } from "./BlogPost.mock";
 import "./BlogPost.scss";
+import { useRef } from 'react';
 
 const BlogPost = ({ blogPost, recommendations, blogPostAuthor }: {blogPost: IPost, recommendations: IPost[], blogPostAuthor: IAuthor}) => {
   blogPost = blogPostMock;
   recommendations = blogRecommendationsMock;
   blogPostAuthor = blogPostAuthorMock;
 
+  const bottomRef = useRef();
+
   return (
     <>
-      <Navbar />
+      <Navbar scrollTo={bottomRef}/>
 
       <div className="blog-container">
         <div className="wrapper">
@@ -62,7 +65,9 @@ const BlogPost = ({ blogPost, recommendations, blogPostAuthor }: {blogPost: IPos
         <JoinOurTeam />
       </div>
 
-      <Footer />
+      <div ref={bottomRef}>
+        <Footer />
+      </div>
     </>
   );
 };

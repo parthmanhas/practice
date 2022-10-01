@@ -1,6 +1,12 @@
+import { RefObject } from 'react';
 import './Navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({ scrollTo } : { scrollTo: RefObject<HTMLDivElement> }) => {
+
+  const executeScroll = () => {
+    scrollTo.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='nav'>
         <div className='logo'>
@@ -11,7 +17,7 @@ const Navbar = () => {
             <li><a href='/blog'>Blog</a></li>
             <li><a href='/about-us'>About Us</a></li>
             <li><a href='/contact-us'>Contact Us</a></li>
-            <li><button>Subscribe</button></li>
+            <li><button onClick={executeScroll}>Subscribe</button></li>
         </ul>
     </div>
   )

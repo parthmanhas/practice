@@ -4,13 +4,15 @@ import './Categories.scss';
 import { categoryPostsMock } from './Categories.mock';
 import { useParams } from 'react-router-dom';
 import { IPost } from './../../interface/App.interface';
+import { useRef } from 'react';
 
 const Categories = ({ categoryPosts, categories, tags }: {categoryPosts: IPost[], categories: string[], tags: string[]}) => {
   const params = useParams();
+  const bottomRef = useRef();
   categoryPosts = categoryPostsMock;
   return (
     <>
-      <Navbar />
+      <Navbar scrollTo={bottomRef}/>
       <div className="top-background"></div>
       <div className="categories-container">
         <div className="top">
@@ -53,7 +55,9 @@ const Categories = ({ categoryPosts, categories, tags }: {categoryPosts: IPost[]
         </div>
       </div>
 
-      <Footer />
+      <div ref={bottomRef}>
+        <Footer />
+      </div>
     </>
   )
 }
