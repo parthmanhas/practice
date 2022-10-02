@@ -2,12 +2,21 @@ import "./AuthorDetails.scss";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import SocialWrapper from "../socialWrapper/SocialWrapper";
-import { useRef } from 'react';
-import { IAuthorDetails } from './../../interface/App.interface';
+import { useEffect, useRef } from 'react';
+import { IAuthor } from './../../interface/App.interface';
+import { useParams } from "react-router-dom";
 
-const AuthorDetails = ({ authorDetail }: {authorDetail: IAuthorDetails}) => {
-
+const AuthorDetails = ({ author }: {author: IAuthor}) => {
+  const params = useParams();
   const bottomRef = useRef();
+
+  useEffect(() => {
+      // fetch author details
+      if(params.id) {
+        //dispatch fetch action reducer
+        console.log(params.id);
+      }
+  }, [params.id]);
 
   return (
     <>
@@ -23,8 +32,8 @@ const AuthorDetails = ({ authorDetail }: {authorDetail: IAuthorDetails}) => {
               ></img>
             </div>
             <div className="right">
-              <h1>{authorDetail.author.name}</h1>
-              <p className="body-1">{authorDetail.author.description.short}</p>
+              <h1>{author.name}</h1>
+              <p className="body-1">{author.description.short}</p>
               <SocialWrapper />
             </div>
           </div>
@@ -38,7 +47,7 @@ const AuthorDetails = ({ authorDetail }: {authorDetail: IAuthorDetails}) => {
             <h1>My Posts</h1>
           </div>
           <div className="bottom">
-            {authorDetail.posts.map((post) => (
+            {author.posts.map((post) => (
               <div className="post">
                 <div className="left">
                   <img

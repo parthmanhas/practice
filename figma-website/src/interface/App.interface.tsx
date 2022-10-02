@@ -6,13 +6,8 @@ export interface IPost {
     authoredDate?: string;
     category?: string;
 }
-
-export interface IAuthorDetail {
-    author: IAuthor;
-    posts : IPost[];
-}
-
 export interface IAuthor {
+    id: string | number;
     imgUrl?: string;
     name?: string;
     description?: {
@@ -20,6 +15,7 @@ export interface IAuthor {
         full?: string;
     }
     location?: string;
+    posts: IPost[]
 }
 
 export interface ICategoryPost {

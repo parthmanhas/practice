@@ -2,18 +2,10 @@ import { IAuthor, IPost } from "../../interface/App.interface";
 import Footer from "../footer/Footer";
 import JoinOurTeam from "../joinOurTeam/JoinOurTeam";
 import Navbar from "../navbar/Navbar";
-import {
-  blogPostAuthorMock,
-  blogPostMock,
-  blogRecommendationsMock,
-} from "./BlogPost.mock";
 import "./BlogPost.scss";
 import { useRef } from 'react';
 
 const BlogPost = ({ blogPost, recommendations, blogPostAuthor }: {blogPost: IPost, recommendations: IPost[], blogPostAuthor: IAuthor}) => {
-  blogPost = blogPostMock;
-  recommendations = blogRecommendationsMock;
-  blogPostAuthor = blogPostAuthorMock;
 
   const bottomRef = useRef();
 

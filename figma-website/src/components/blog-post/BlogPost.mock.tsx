@@ -4,7 +4,9 @@ export const blogRecommendationsMock: IPost[] = [
     {
         imageUrl: '',
         author: {
-            name: 'John Doe 1'
+            id: 1,
+            name: 'John Doe 1',
+            posts: []
         },
         authoredDate: 'Aug 23, 2021',
         heading: 'A UX Case Study Creating a Studious Environment for Students: ',
@@ -13,7 +15,9 @@ export const blogRecommendationsMock: IPost[] = [
     {
         imageUrl: '',
         author: {
-            name: 'John Doe 2'
+            id: 2,
+            name: 'John Doe 2',
+            posts: []
         },
         authoredDate: 'Aug 23, 2021',
         heading: 'A UX Case Study Creating a Studious Environment for Students: ',
@@ -22,7 +26,9 @@ export const blogRecommendationsMock: IPost[] = [
     {
         imageUrl: '',
         author: {
-            name: 'John Doe 3'
+            id: 3,
+            name: 'John Doe 3',
+            posts: []
         },
         authoredDate: 'Aug 23, 2021',
         heading: 'A UX Case Study Creating a Studious Environment for Students: ',
@@ -36,6 +42,8 @@ export const blogPostMock: IPost = {
 }
 
 export const blogPostAuthorMock: IAuthor = {
+    id: 1,
     name: 'Andrew Jonson',
-    imgUrl: ''
+    imgUrl: '',
+    posts: []
 }

@@ -89,7 +89,9 @@ h6 {
 }
 
 * {
+    text-decoration: none;
     button {
+        cursor: pointer;
         transition: all 0.2s;
         &:hover {
             background-color: #592EA9 !important;
