@@ -1,5 +1,5 @@
 .featured-container {
-    height: 100vh;
+    height: 130vh;
     width: 90vw;
     display: flex;
     margin: 0vh 5vw;
@@ -14,7 +14,8 @@
     .all-posts {
         width: 40%;
         height: 100%;
-
+        display: flex;
+        flex-direction: column;
         h4 {
             margin: 0;
             padding: 0;
@@ -30,8 +31,23 @@
         .post-container {
             display: flex;
             flex-direction: column;
-            .post{
-                padding: 32px;
+            flex-grow: 1;
+            a {
+                display: flex;
+                flex-grow: 1;
+                transition: all 0.2s;
+                .post {
+                    padding: 32px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                }
+
+                &:hover {
+                    background-color: var(--yellow);
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -41,23 +57,23 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-
+        overflow: hidden;
         .heading-container {
             padding-bottom: 16px;
         }
 
         .card-container {
-            box-sizing: border-box;
+            display: flex;
+            height: 100%;
             border: 1px solid rgba(0, 0, 0, 0.1);
-            height: 90%;
             .card {
-                padding: 32px;
+                padding: 0px;
                 height: calc(100% - 64px);
                 display: flex;
                 flex-direction: column;
                 .img-container {
                     margin: 0;
-                    // height: calc(60% - 32px);
+                    height: calc(25% - 32px);
                     overflow: hidden;
                     img {
                         width: 100%;
@@ -66,7 +82,8 @@
                 }
 
                 .info-container {
-                    // height: calc(40% - 32px);
+                    height: calc(50% - 32px);
+                    padding: 32px;
                     span {
                         color: var(--purple);
                     }

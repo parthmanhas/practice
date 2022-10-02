@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: <PrivacyPolicy />,
   },
   {
-    path: "/blog-post",
+    path: "/blog-post/:id",
     element: (
       <BlogPost blogPost={blogPostMock} recommendations={blogRecommendationsMock} blogPostAuthor={blogPostAuthorMock} />
     ),

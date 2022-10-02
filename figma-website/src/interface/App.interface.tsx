@@ -1,4 +1,5 @@
 export interface IPost {
+    id: string | number;
     imageUrl?: string;
     heading?: string;
     content?: string;
@@ -15,7 +16,7 @@ export interface IAuthor {
         full?: string;
     }
     location?: string;
-    posts: IPost[]
+    posts?: IPost[]
 }
 
 export interface ICategoryPost {

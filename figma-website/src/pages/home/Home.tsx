@@ -12,6 +12,7 @@ import JoinOurTeam from "../../components/joinOurTeam/JoinOurTeam";
 import { authorsMock } from "./Home.mock";
 import { useRef } from "react";
 import { testimonialsMock } from "./testimonials/testimonials.mock";
+import { featuredPagePostsMock, featuredPostMock } from "./featuredPosts/featuredPosts.mock";
 
 const Home = () => {
   const bottomRef = useRef();
@@ -20,7 +21,7 @@ const Home = () => {
     <>
       <Navbar scrollTo={bottomRef} />
       <Hero />
-      <FeaturedPosts />
+      <FeaturedPosts featuredPost={featuredPostMock} posts={featuredPagePostsMock}/>
       <AboutUs />
       <ChooseCatergory />
       <SpecialCategory />

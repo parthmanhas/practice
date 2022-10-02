@@ -2,6 +2,7 @@ import { IAuthor, IPost } from "../../interface/App.interface";
 
 export const blogRecommendationsMock: IPost[] = [
     {
+        id: 1,
         imageUrl: '',
         author: {
             id: 1,
@@ -13,6 +14,7 @@ export const blogRecommendationsMock: IPost[] = [
         content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. ',
     },
     {
+        id: 2,
         imageUrl: '',
         author: {
             id: 2,
@@ -24,6 +26,7 @@ export const blogRecommendationsMock: IPost[] = [
         content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. ',
     },
     {
+        id: 3,
         imageUrl: '',
         author: {
             id: 3,
@@ -37,6 +40,7 @@ export const blogRecommendationsMock: IPost[] = [
 ];
 
 export const blogPostMock: IPost = {
+    id: 1,
     heading: '',
     content: '<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>'
 }

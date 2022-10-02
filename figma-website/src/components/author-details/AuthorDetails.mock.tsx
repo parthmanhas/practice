@@ -9,6 +9,7 @@ export const authorDetailsMock: IAuthor = {
   },
   posts: [
     {
+      id: 1,
       imageUrl: "",
       heading: "Font sizes in UI design: The complete guide to follow",
       category: "BUSINESS",
@@ -16,6 +17,7 @@ export const authorDetailsMock: IAuthor = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
+      id: 2,
       imageUrl: "",
       heading: "Font sizes in UI design: The complete guide to follow",
       category: "BUSINESS",
