@@ -5,19 +5,18 @@ import { RefObject, useRef, useState } from "react";
 const Testimonials = ({ testimonials }: { testimonials: ITestimonials[] }) => {
   const testimonialRef: RefObject<HTMLDivElement> = useRef();
   const testimonialSliderRef: RefObject<HTMLDivElement> = useRef();
-  const [sliderCount, setSliderCount] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const slide = (direction) => {
-    let multiplier = 0;
+    let slideToIndex;
     if(direction === 'left'){
-      multiplier = -1; 
-      setSliderCount((sliderCount + 1) % testimonials.length);
+      slideToIndex = currentSlide === testimonials.length - 1 ? 0 : currentSlide + 1;
+      setCurrentSlide(slideToIndex);
     } else {
-      multiplier = 1;
-
-      setSliderCount((sliderCount - 1) % testimonials.length);
+      slideToIndex = currentSlide === 0 ? (testimonials.length - 1) : currentSlide - 1;
+      setCurrentSlide(slideToIndex);
     }
-    testimonialSliderRef.current.style.transform = `translateX(${(multiplier * 100 * sliderCount)}%)`;
+    testimonialSliderRef.current.style.transform = `translateX(${(100 * -slideToIndex)}%)`;
   };
 
   return (
