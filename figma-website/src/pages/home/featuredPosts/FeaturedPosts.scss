@@ -68,22 +68,33 @@
             border: 1px solid rgba(0, 0, 0, 0.1);
             .card {
                 padding: 0px;
-                height: calc(100% - 64px);
+                // height: calc(100% - 64px);
                 display: flex;
                 flex-direction: column;
+                position: relative;
+                width: 100%;
                 .img-container {
                     margin: 0;
-                    height: calc(25% - 32px);
+                    height: 45%;
                     overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    // background-image: url('../../../static/images/featured-post.jpeg');
+                    // background-repeat: no-repeat;
+                    // background-size: contain;
                     img {
                         width: 100%;
-                        transform: translateY(-50%);
                     }
                 }
 
                 .info-container {
-                    height: calc(50% - 32px);
                     padding: 32px;
+                    bottom: 0;
+                    position: absolute;
                     span {
                         color: var(--purple);
                     }
