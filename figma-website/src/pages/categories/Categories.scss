@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .top-background {
     height: 35vh;
 }
@@ -5,10 +7,7 @@
     width: 90vw;
     margin: 5vh 5vw;
     .top {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column);
 
         h1 {
             margin: 0;

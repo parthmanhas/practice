@@ -1,13 +1,12 @@
+@import '../../App.scss';
+
 .footer-container {
     height: 50vh;
     width: 100%;
     margin: 0;
     background-color: var(--nav);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column);
 
     .top {
         width: 90%;

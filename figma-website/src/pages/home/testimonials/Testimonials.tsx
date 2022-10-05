@@ -7,15 +7,14 @@ const Testimonials = ({ testimonials }: { testimonials: ITestimonials[] }) => {
   const testimonialSliderRef: RefObject<HTMLDivElement> = useRef();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slide = (direction) => {
-    let slideToIndex;
+  const slide = (direction: string) => {
+    let slideToIndex: number;
     if(direction === 'left'){
       slideToIndex = currentSlide === testimonials.length - 1 ? 0 : currentSlide + 1;
-      setCurrentSlide(slideToIndex);
     } else {
       slideToIndex = currentSlide === 0 ? (testimonials.length - 1) : currentSlide - 1;
-      setCurrentSlide(slideToIndex);
     }
+    setCurrentSlide(slideToIndex);
     testimonialSliderRef.current.style.transform = `translateX(${(100 * -slideToIndex)}%)`;
   };
 
@@ -56,10 +55,10 @@ const Testimonials = ({ testimonials }: { testimonials: ITestimonials[] }) => {
         </div>
         <div className="arrows">
           <div className="left-arrow" onClick={() => slide("left")}>
-            &lt;--
+            &lt;
           </div>
           <div className="right-arrow" onClick={() => slide("right")}>
-            --&gt;
+            &gt;
           </div>
         </div>
       </div>

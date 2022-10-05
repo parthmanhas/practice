@@ -1,37 +1,50 @@
 :root {
-    --purple: #592EA9;
-    --yellow: #FFD050;
-    --grey: #6D6E76;
-    --light-grey: #F4F4F4;
-    --medium-grey: #6D6E76;
+    --purple: #592ea9;
+    --yellow: #ffd050;
+    --grey: #6d6e76;
+    --light-grey: #f4f4f4;
+    --medium-grey: #6d6e76;
     --dark-blue: #282938;
-    --light-yellow: #FBF6EA;
+    --light-yellow: #fbf6ea;
     --nav: #232536;
-    --lavender: #F4F0F8
+    --lavender: #f4f0f8;
+}
+
+.full-page-container {
+    height: 100vh;
+    width: 90vw;
+    margin: 5vh 5vw;
+}
+
+@mixin flex ($direction: row, $justify-content: center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: center;
 }
 
 @font-face {
-    font-family: 'sen';
-    src: local('sen'), url(./static/fonts/Sen-Regular.ttf);
+    font-family: "sen";
+    src: local("sen"), url(./static/fonts/Sen-Regular.ttf);
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'sen';
-    src: local('sen'), url(./static/fonts/Sen-Bold.ttf);
+    font-family: "sen";
+    src: local("sen"), url(./static/fonts/Sen-Bold.ttf);
     font-weight: bold;
 }
 
 @font-face {
-    font-family: 'inter';
-    src: local('sen'), url(./static/fonts/Inter.ttf);
+    font-family: "inter";
+    src: local("sen"), url(./static/fonts/Inter.ttf);
 }
 
 // * {
 //     outline: 1px solid #f00 !important;
 //   }
 * {
-    font-family: 'sen';
+    font-family: "sen";
     font-size: 16px;
     line-height: 28px;
 }
@@ -76,15 +89,18 @@ h6 {
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
-    color: #6D6E76;
+    color: #6d6e76;
 }
 
-.body-2, .label-01 {
+.body-2,
+.label-01 {
     font-size: 14px;
     line-height: 20px;
 }
 
-.cap-1, .cap-03, .cap-04 {
+.cap-1,
+.cap-03,
+.cap-04 {
     font-size: 16px;
     line-height: 20px;
 }
@@ -100,10 +116,9 @@ h6 {
         cursor: pointer;
         transition: all 0.2s;
         &:hover {
-            background-color: #592EA9 !important;
+            background-color: #592ea9 !important;
             color: white;
             transform: scale(1.1);
         }
     }
 }
-

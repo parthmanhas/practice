@@ -1,7 +1,9 @@
+@import '../../../App.scss';
+
 .logos-container {
+    @extend .full-page-container;
     height: 20vh;
-    width: 90vw;
-    margin: 0 5vw;
+
     display: flex;
     justify-content: center;
     align-items: center;

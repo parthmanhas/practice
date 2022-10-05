@@ -1,4 +1,4 @@
-import "./Authos.scss";
+import "./Author.scss";
 import SocialWrapper from "../../../components/socialWrapper/SocialWrapper";
 import { IAuthor } from "../../../interface/App.interface";
 import { Link } from "react-router-dom";

@@ -1,18 +1,13 @@
+@import '../../App.scss';
+
 .join-our-team-container {
+    @extend .full-page-container;
+    @include flex(column);
     height: 50vh;
-    width: 90vw;
-    margin: 5vh 5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
     .text {
         width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex(column);
         text-align: center;
     }
 

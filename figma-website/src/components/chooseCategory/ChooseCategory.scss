@@ -1,11 +1,8 @@
+@import '../../App.scss';
+
 .choose-category-container {
-    height: 100vh;
-    width: 90vw;
-    margin: 0vh 5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @extend .full-page-container;
+    @include flex(column);
 
     .category-container {
         display: flex;
