@@ -14,15 +14,25 @@ import { useRef } from "react";
 import { testimonialsMock } from "./testimonials/testimonials.mock";
 import { featuredPagePostsMock, featuredPostMock } from "./featuredPosts/featuredPosts.mock";
 import { useSearchParams } from 'react-router-dom';
+import './Home.scss';
 
 const Home = () => {
   const bottomRef = useRef();
   const [searchUrlParams, setSearchUrlParams] = useSearchParams();
 
   const editMode: boolean = searchUrlParams.get('edit') as unknown as boolean;
+
+  const save = () => {
+    //make a call to database
+    console.log(data)
+  }
+
+  const data = {};
+
   return (
     <>
-      <Navbar editMode={editMode} scrollTo={bottomRef} />
+      {editMode && <button className='edit-mode-save' onClick={save}>Save</button>}
+      <Navbar dataToSave={data} editMode={editMode} scrollTo={bottomRef} />
       <Hero />
       <FeaturedPosts featuredPost={featuredPostMock} posts={featuredPagePostsMock}/>
       <AboutUs />

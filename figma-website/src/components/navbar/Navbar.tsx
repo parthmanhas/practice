@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 import './Navbar.scss';
 
-const Navbar = ({ scrollTo, editMode } : { scrollTo: RefObject<HTMLDivElement>, editMode?: boolean}) => {
+const Navbar = ({ scrollTo, editMode, dataToSave } : { scrollTo: RefObject<HTMLDivElement>, editMode?: boolean, dataToSave?: any}) => {
 
   const executeScroll = () => {
     scrollTo.current.scrollIntoView({ behavior: 'smooth' });
@@ -9,7 +9,7 @@ const Navbar = ({ scrollTo, editMode } : { scrollTo: RefObject<HTMLDivElement>, 
 
   const updateText = (e, identifier: string) => {
     navbarElementsData[identifier] = e.target.innerHTML;
-    //dispatch event
+    dataToSave['navbar'] = navbarElementsData;
   }
 
   const navbarElementsData = {
