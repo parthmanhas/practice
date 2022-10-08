@@ -1,23 +1,37 @@
 import { RefObject } from 'react';
 import './Navbar.scss';
 
-const Navbar = ({ scrollTo } : { scrollTo: RefObject<HTMLDivElement> }) => {
+const Navbar = ({ scrollTo, editMode } : { scrollTo: RefObject<HTMLDivElement>, editMode?: boolean}) => {
 
   const executeScroll = () => {
     scrollTo.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const updateText = (e, identifier: string) => {
+    navbarElementsData[identifier] = e.target.innerHTML;
+    //dispatch event
+  }
+
+  const navbarElementsData = {
+    0: 'Finsweet',
+    1: 'Home',
+    2: 'Blog',
+    3: 'About Us',
+    4: 'Contact Us',
+    5: 'Subscribe'
+  }
+
   return (
     <div className='nav'>
-        <div className='logo'>
-        &#123;Finsweet
+        <div className='logo' onInput={e => updateText(e, '0')} contentEditable={editMode}>
+        &#123;{navbarElementsData[0]}
         </div>
         <ul className='nav-items'>
-            <li><a href='/home'>Home</a></li>
-            <li><a href='/blog'>Blog</a></li>
-            <li><a href='/about-us'>About Us</a></li>
-            <li><a href='/contact-us'>Contact Us</a></li>
-            <li><button onClick={executeScroll}>Subscribe</button></li>
+            <li><a href='/home' onInput={e => updateText(e, '1')} contentEditable={editMode}>{navbarElementsData[1]}</a></li>
+            <li><a href='/blog' onInput={e => updateText(e, '2')} contentEditable={editMode}>{navbarElementsData[2]}</a></li>
+            <li><a href='/about-us' onInput={e => updateText(e, '3')} contentEditable={editMode}>{navbarElementsData[3]}</a></li>
+            <li><a href='/contact-us' onInput={e => updateText(e, '4')} contentEditable={editMode}>{navbarElementsData[4]}</a></li>
+            <li><button onClick={editMode ? () => {} : executeScroll} contentEditable={editMode}>{navbarElementsData[5]}</button></li>
         </ul>
     </div>
   )

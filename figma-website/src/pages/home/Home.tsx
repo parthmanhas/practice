@@ -13,13 +13,16 @@ import { authorsMock } from "./Home.mock";
 import { useRef } from "react";
 import { testimonialsMock } from "./testimonials/testimonials.mock";
 import { featuredPagePostsMock, featuredPostMock } from "./featuredPosts/featuredPosts.mock";
+import { useSearchParams } from 'react-router-dom';
 
 const Home = () => {
   const bottomRef = useRef();
+  const [searchUrlParams, setSearchUrlParams] = useSearchParams();
 
+  const editMode: boolean = searchUrlParams.get('edit') as unknown as boolean;
   return (
     <>
-      <Navbar scrollTo={bottomRef} />
+      <Navbar editMode={editMode} scrollTo={bottomRef} />
       <Hero />
       <FeaturedPosts featuredPost={featuredPostMock} posts={featuredPagePostsMock}/>
       <AboutUs />
