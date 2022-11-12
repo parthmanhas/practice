@@ -30,11 +30,14 @@ const Logo = styled.div`
 const InputContainer = styled.div`
   margin: 0.5rem;
   display: flex;
+  background-color: ${(props) => props.theme.colors.grey};
 `;
 
 const Input = styled.input`
   border: none;
   font-size: 1rem;
+  background-color: ${(props) => props.theme.colors.grey};
+  outline: none;
 `;
 
 const IconContainer = styled.div`
@@ -78,13 +81,13 @@ const Header = () => {
         </InputContainer>
         <IconContainer>
           <Icon>
-            <BiShoppingBag></BiShoppingBag>
+            <BsHeart></BsHeart>
           </Icon>
           <Icon>
             <BsPerson></BsPerson>
           </Icon>
           <Icon>
-            <BsHeart></BsHeart>
+            <BiShoppingBag></BiShoppingBag>
           </Icon>
         </IconContainer>
       </Right>
