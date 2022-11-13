@@ -2,6 +2,10 @@ import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import styled from "styled-components";
 
+interface IAppFooter {
+    bright?: boolean;
+}
+
 const footerItems = [
   {
     heading: "Shop By Category",
@@ -36,6 +40,7 @@ const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
+  width: calc(100% - 3rem);
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.lightText};
 `;
@@ -51,8 +56,9 @@ const List = styled.ul`
   margin-right: 3rem;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled.li<IAppFooter>`
   margin: 0.5rem;
+  color: ${props => props.bright ? props.theme.colors.bright : 'inherit'};
 `;
 
 const IconContainer = styled.div`
@@ -64,13 +70,14 @@ const Icon = styled.div`
   font-size: 1.5rem;
 `;
 
-const Country = styled.div`
+const Country = styled.div<IAppFooter>`
   display: flex;
   align-items: center;
+  color: ${props => props.bright ? props.theme.colors.bright : 'inherit'};
 `;
 
 const CopyRight = styled.div`
-    margin: 0.75rem;
+    margin: 0.75rem
 `;
 
 const AppFooter = () => {
@@ -78,19 +85,19 @@ const AppFooter = () => {
     <Footer>
       <Left>
         <List>
-          <ListItem>{footerItems[0].heading}</ListItem>
+          <ListItem bright>{footerItems[0].heading}</ListItem>
           {footerItems[0].items.map((item) => (
             <ListItem>{item}</ListItem>
           ))}
         </List>
         <List>
-          <ListItem>{footerItems[1].heading}</ListItem>
+          <ListItem bright>{footerItems[1].heading}</ListItem>
           {footerItems[1].items.map((item) => (
             <ListItem>{item}</ListItem>
           ))}
         </List>
         <List>
-          <ListItem>{footerItems[2].heading}</ListItem>
+          <ListItem bright>{footerItems[2].heading}</ListItem>
           {footerItems[2].items.map((item) => (
             <ListItem>{item}</ListItem>
           ))}
@@ -111,7 +118,7 @@ const AppFooter = () => {
             <BsYoutube />
           </Icon>
         </IconContainer>
-        <Country>
+        <Country bright>
           <Icon>
             <CiLocationOn></CiLocationOn>
           </Icon>
