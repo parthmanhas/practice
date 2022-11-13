@@ -6,6 +6,8 @@ import Home from "./pages/home/Home";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/GlobalStyles";
 import { GLOBAL_THEME } from "./styles/GlobalTheme";
+import Category from './pages/category/Category';
+import Product from "./pages/product/Product";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/category",
+    element: <Category />,
+  },
+  {
+    path: "/product",
+    element: <Product />,
   },
 ]);
 

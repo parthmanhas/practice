@@ -1,10 +1,9 @@
-import { BsArrowRight, BsHeart } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import styled from "styled-components";
 import AppFooter from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import ProductItem, {
-  IProductItem,
-} from "../../components/product/ProductItem";
+import ProductItem from "../../components/product/ProductItem";
+import { productItems, collections, brands } from "../../Mocks";
 
 const Delays = styled.div`
   display: flex;
@@ -157,33 +156,6 @@ const BottomBannerRight = styled.div`
   border-radius: 1rem;
   background-color: ${(props) => props.theme.colors.grey};
 `;
-
-const productItems: IProductItem[] = [
-  {
-    name: "Grande",
-    description: "Blossom Pouch",
-    price: "39.49",
-  },
-  {
-    name: "Coach",
-    description: "Leather Bag",
-    price: "54.69",
-  },
-  {
-    name: "Remus",
-    description: "Brown Strap Bag",
-    price: "57.00",
-  },
-  {
-    name: "Boujee",
-    description: "Black Bag",
-    price: "56.49",
-  },
-];
-
-const collections = ["Personal Care", "Handbags", "Wrist Watch", "Sun Glasses"];
-
-const brands = ["zara", "d&g", "h&m", "chanel", "prada", "biba"];
 
 const Home = () => {
   return (

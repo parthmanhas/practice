@@ -1,7 +1,10 @@
 import { BsHeart } from "react-icons/bs";
 import styled from "styled-components";
+import StarRating from "../stars/StarRating";
 
-const Product = styled.div``;
+const Product = styled.div`
+  margin-bottom: 2rem;
+`;
 
 const ProductTop = styled.div`
   height: calc(100vw / 5);
@@ -15,7 +18,8 @@ const ProductBottom = styled.div`
   justify-content: space-between;
 `;
 
-const ProductBottomLeft = styled.div``;
+const ProductBottomLeft = styled.div`
+`;
 
 const ProductName = styled.p`
   color: ${(props) => props.theme.colors.dark};
@@ -31,13 +35,21 @@ const ProductAmount = styled.p`
 
 const ProductBottomRight = styled.div``;
 
+
+
 export interface IProductItem {
   name: string;
   description: string;
   price: string | number;
 }
 
-const ProductItem = ({ product }: { product: IProductItem }) => {
+const ProductItem = ({
+  product,
+  stars,
+}: {
+  product: IProductItem;
+  stars?: number;
+}) => {
   return (
     <>
       <Product>
@@ -46,6 +58,7 @@ const ProductItem = ({ product }: { product: IProductItem }) => {
           <ProductBottomLeft>
             <ProductName>{product.name}</ProductName>
             <ProductDescription>{product.description}</ProductDescription>
+            <StarRating stars={3}/>
             <ProductAmount>${product.price}</ProductAmount>
           </ProductBottomLeft>
           <ProductBottomRight>
