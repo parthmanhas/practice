@@ -6,6 +6,7 @@ import Header from "../../components/header/Header";
 import Offer from "../../components/offer/Offer";
 import StarRating from "../../components/stars/StarRating";
 import Stepper from "../../components/stepper/Stepper";
+import Tabs from "../../components/tabs/Tabs";
 
 const Container = styled.div`
   margin: 1.5rem;
@@ -196,7 +197,9 @@ const Product = () => {
           </ProductContainerRight>
         </ProductContainer>
         <ProductDetailedInfoContainer>
-          <ProductDetailsTabs></ProductDetailsTabs>
+          <ProductDetailsTabs>
+            <Tabs />
+          </ProductDetailsTabs>
         </ProductDetailedInfoContainer>
       </Container>
       <AppFooter />
