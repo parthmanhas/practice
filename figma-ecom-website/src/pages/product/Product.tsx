@@ -179,7 +179,7 @@ const Product = () => {
             </DeliveryDetailsContainer>
             <Quantity>
               <h3>Quantity:</h3>
-              <Stepper />
+              <Stepper fontSize={1}/>
             </Quantity>
             <Offers>
               <Offer />

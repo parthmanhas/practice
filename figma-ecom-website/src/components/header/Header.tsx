@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { BsHeart, BsPerson, BsSearch } from "react-icons/bs";
 import { BiShoppingBag } from "react-icons/bi";
+import Modal from "../modal/CartModal";
+import { useState } from 'react';
 
 const NavBar = styled.div`
   display: flex;
@@ -57,6 +59,9 @@ const ListItem = styled.li`
 `;
 
 const Header = () => {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <NavBar>
       <Left>
@@ -86,11 +91,12 @@ const Header = () => {
           <Icon>
             <BsPerson></BsPerson>
           </Icon>
-          <Icon>
+          <Icon onClick={() => setShowModal(!showModal)}>
             <BiShoppingBag></BiShoppingBag>
           </Icon>
         </IconContainer>
       </Right>
+      {showModal && <Modal setShowModal={setShowModal}/>}
     </NavBar>
   );
 };
