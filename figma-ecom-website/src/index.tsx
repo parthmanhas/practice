@@ -9,6 +9,7 @@ import { GLOBAL_THEME } from "./styles/GlobalTheme";
 import Category from "./pages/category/Category";
 import Product from "./pages/product/Product";
 import Cart from "./pages/cart/cart";
+import Checkout from './pages/Checkout';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     path: "/cart",
     element: <Cart />,
   },
+  {
+    path: "/checkout",
+    element: <Checkout />,
+  }
 ]);
 
 root.render(
