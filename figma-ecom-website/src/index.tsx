@@ -11,6 +11,7 @@ import Product from "./pages/product/Product";
 import Cart from "./pages/cart/cart";
 import Checkout from './pages/Checkout';
 import CheckoutPayment from './pages/CheckoutPayment';
+import PersonalInformation from "./pages/PersonalInformation";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/checkout-payment",
     element: <CheckoutPayment />,
+  },
+  {
+    path: "/personal",
+    element: <PersonalInformation />,
   }
 ]);
 

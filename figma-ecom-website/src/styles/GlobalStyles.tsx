@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
     color: '#FFF';
     background-color: '#1B4B66';
     border: none;
+    padding: 0.5rem;
+    margin: 1rem;
+    display: inline-block;
   }
   input {
     background-color: #F1F1F1;
