@@ -13,6 +13,7 @@ import Checkout from './pages/Checkout';
 import CheckoutPayment from './pages/CheckoutPayment';
 import PersonalInformation from "./pages/PersonalInformation";
 import MyOrders from './pages/MyOrders';
+import OrderDetails from './pages/OrderDetails';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/my-orders",
     element: <MyOrders />,
+  },
+  {
+    path: "/order-details",
+    element: <OrderDetails />,
   }
 ]);
 

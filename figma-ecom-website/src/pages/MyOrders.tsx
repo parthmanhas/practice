@@ -1,4 +1,3 @@
-import { RiArrowRightSLine } from "react-icons/ri";
 import styled from "styled-components";
 import AppFooter from "../components/footer/Footer";
 import FulfilledOrders from "../components/FulfilledOrders";

@@ -1,9 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import AppFooter from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import PersonalDetails from "../components/PersonalDetails";
-import { RiArrowRightSLine } from "react-icons/ri";
 import SideBar from "../components/SideBar";
 
 const NavInfo = styled.div``;
