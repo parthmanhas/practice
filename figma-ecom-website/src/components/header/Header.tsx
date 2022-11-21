@@ -2,9 +2,23 @@ import styled from "styled-components";
 import { BsHeart, BsPerson, BsSearch } from "react-icons/bs";
 import { BiShoppingBag } from "react-icons/bi";
 import Modal from "../modal/CartModal";
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const NavBar = styled.div`
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+`;
+
+const NavBar = styled.nav`
   display: flex;
   background-color: ${(props) => props.theme.colors.bright};
   margin: 0.5rem 1.5rem;
@@ -28,6 +42,7 @@ const Logo = styled.div`
   margin-right: 1rem;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.primary};
+  cursor: pointer;
 `;
 const InputContainer = styled.div`
   margin: 0.5rem;
@@ -49,6 +64,10 @@ const IconContainer = styled.div`
 const Icon = styled.div`
   margin: 0.5rem;
   font-size: 1.5rem;
+  &:hover {
+    border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  }
+  cursor: pointer;
 `;
 const List = styled.ul`
   display: flex;
@@ -56,22 +75,39 @@ const List = styled.ul`
 `;
 const ListItem = styled.li`
   margin: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  }
+  list-style: none;
+  text-decoration: none;
 `;
 
 const Header = () => {
-
   const [showModal, setShowModal] = useState(false);
 
   return (
     <NavBar>
       <Left>
         <List>
-          <Logo>Cora'l</Logo>
-          <ListItem>Handbags</ListItem>
-          <ListItem>Watches</ListItem>
-          <ListItem>Skincare</ListItem>
-          <ListItem>Jewellery</ListItem>
-          <ListItem>Apparels</ListItem>
+          <StyledLink to={"/"} relative="path">
+            <Logo>Cora'l</Logo>
+          </StyledLink>
+          <StyledLink to={"/category/handbags"}>
+            <ListItem>Handbags</ListItem>
+          </StyledLink>
+          <StyledLink to={"/category/watches"}>
+            <ListItem>Watches</ListItem>
+          </StyledLink>
+          <StyledLink to={"/category/skincare"}>
+            <ListItem>Skincare</ListItem>
+          </StyledLink>
+          <StyledLink to={"/category/jewellery"}>
+            <ListItem>Jewellery</ListItem>
+          </StyledLink>
+          <StyledLink to={"/category/apparels"}>
+            <ListItem>Apparels</ListItem>
+          </StyledLink>
         </List>
       </Left>
       <Right>
@@ -96,7 +132,7 @@ const Header = () => {
           </Icon>
         </IconContainer>
       </Right>
-      {showModal && <Modal setShowModal={setShowModal}/>}
+      {showModal && <Modal setShowModal={setShowModal} />}
     </NavBar>
   );
 };

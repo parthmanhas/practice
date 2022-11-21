@@ -1,4 +1,5 @@
 import { BsHeart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import StarRating from "../stars/StarRating";
 
@@ -35,7 +36,24 @@ const ProductAmount = styled.p`
 
 const ProductBottomRight = styled.div``;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
 
+  &:focus,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    padding: 1rem;
+    margin: 0.75rem;
+    margin-top: 0;
+    border: 1px solid ${props => props.theme.colors.primary};
+  }
+`;
 
 export interface IProductItem {
   name: string;
@@ -51,7 +69,7 @@ const ProductItem = ({
   stars?: number;
 }) => {
   return (
-    <>
+    <StyledLink to="/product">
       <Product>
         <ProductTop></ProductTop>
         <ProductBottom>
@@ -66,7 +84,7 @@ const ProductItem = ({
           </ProductBottomRight>
         </ProductBottom>
       </Product>
-    </>
+    </StyledLink>
   );
 };
 

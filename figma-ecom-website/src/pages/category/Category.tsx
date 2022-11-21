@@ -1,5 +1,6 @@
 import { BsGrid3X3GapFill } from "react-icons/bs";
 import { GrSort } from "react-icons/gr";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Filter from "../../components/filter/Filter";
 import AppFooter from "../../components/footer/Footer";
@@ -17,8 +18,11 @@ const Banner = styled.div`
 const CategoryInfo = styled.div`
   margin: 1.5rem;
 `;
-const CategoryNavigation = styled.div``;
+const CategoryNavigation = styled.div`
+  text-transform: capitalize;
+`;
 const CategoryName = styled.h1`
+  text-transform: capitalize;
   color: ${(props) => props.theme.colors.primary};
 `;
 const MainContainer = styled.div`
@@ -38,8 +42,8 @@ const Layout = styled.div`
   align-items: center;
 `;
 const Icon = styled.div`
-    margin: 0.25rem;
-    font-size: 1.75rem;
+  margin: 0.25rem;
+  font-size: 1.75rem;
 `;
 const ShowingItemsInfo = styled.div`
   margin-left: 0.5rem;
@@ -105,13 +109,16 @@ const MainRightMiddle = styled.div`
 `;
 
 const Category = () => {
+  const loader = useParams();
+  const category = loader.category;
+
   return (
     <>
       <Header />
       <Banner></Banner>
       <CategoryInfo>
-        <CategoryNavigation>Home &gt; Handbags</CategoryNavigation>
-        <CategoryName>Handbags</CategoryName>
+        <CategoryNavigation>Home &gt; {category}</CategoryNavigation>
+        <CategoryName>{category}</CategoryName>
       </CategoryInfo>
       <MainContainer>
         <MainLeft>
@@ -167,5 +174,4 @@ const Category = () => {
     </>
   );
 };
-
 export default Category;
