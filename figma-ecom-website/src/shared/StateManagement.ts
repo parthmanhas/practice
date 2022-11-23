@@ -57,6 +57,18 @@ export function addToCart(product: IProductItem) {
     }
 }
 
+export function addToWishlist(product: IProductItem) {
+    const existingProduct = STATE.pages.wishlist.filter(item => item.id === product.id)[0];
+    console.log('existing product', JSON.stringify(existingProduct))
+    if (!existingProduct) {
+        STATE.pages.wishlist.push(product);
+    }
+}
+
 export function removeFromCart(productId: string) {
     STATE.pages.cart = STATE.pages.cart.filter(item => item.id !== productId);
+}
+
+export function removeFromWishlist(productId: string) {
+    STATE.pages.wishlist = STATE.pages.wishlist.filter(item => item.id !== productId);
 }

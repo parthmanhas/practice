@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { STATE, addToCart, clearAppState, removeFromCart } from './StateManagement';
+import { STATE, addToCart, clearAppState, removeFromCart, addToWishlist, removeFromWishlist } from './StateManagement';
 import { IProductItem } from './../components/product/ProductItem';
 
 describe('state management testing', () => {
@@ -32,5 +32,22 @@ describe('state management testing', () => {
         addToCart(product);
         removeFromCart(product.id);
         expect(STATE.pages.cart.length).toBe(0);
+    });
+
+    test('adds product to wishlist', () => {
+        addToWishlist(product);
+        expect(STATE.pages.wishlist).toContain(product);
+    });
+
+    test('if product is already added in wishlist, do not add', () => {
+        addToWishlist(product);
+        addToWishlist(product);
+        expect(STATE.pages.wishlist.length).toBe(1);
+    });
+
+    test('remove product from wishlist', () => {
+        addToWishlist(product);
+        removeFromWishlist(product.id);
+        expect(STATE.pages.wishlist.length).toBe(0);
     });
 });
