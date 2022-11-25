@@ -1,5 +1,5 @@
 import { BsArrowRight } from "react-icons/bs";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import AppFooter from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import ProductItem from "../../components/product/ProductItem";
@@ -184,8 +184,8 @@ const Home = () => {
           <h3>View All &gt;</h3>
         </TopContainer>
         <BottomContainer>
-          {productItems.map((productItem) => (
-            <ProductItem product={productItem} />
+          {productItems.map((productItem, index) => (
+            <ProductItem layout={2} key={index} product={productItem} />
           ))}
         </BottomContainer>
       </NewArrivals>

@@ -1,7 +1,7 @@
 import { BsGrid3X3GapFill } from "react-icons/bs";
 import { GrSort } from "react-icons/gr";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Filter from "../../components/filter/Filter";
 import AppFooter from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
@@ -111,7 +111,6 @@ const MainRightMiddle = styled.div`
 const Category = () => {
   const loader = useParams();
   const category = loader.category;
-
   return (
     <>
       <Header />
@@ -122,8 +121,8 @@ const Category = () => {
       </CategoryInfo>
       <MainContainer>
         <MainLeft>
-          {filters.map((filter) => (
-            <Filter data={filter} />
+          {filters.map((filter, index) => (
+            <Filter key={index} data={filter} />
           ))}
         </MainLeft>
         <MainRight>
@@ -155,8 +154,8 @@ const Category = () => {
             </SortByContainer>
           </MainRightTop>
           <MainRightMiddle>
-            {productItems.map((productItem) => (
-              <ProductItem stars={3} product={productItem} />
+            {productItems.map((productItem, index) => (
+              <ProductItem layout={1} key={index} stars={3} product={productItem} />
             ))}
           </MainRightMiddle>
           <MainRightBottom>

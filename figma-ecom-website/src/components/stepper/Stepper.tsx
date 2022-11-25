@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiMinus } from "react-icons/bi";
 import { BsPlus } from "react-icons/bs";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Container = styled.div<IStepper>`
   border: 2px solid ${(props) => props.theme.colors.primary};

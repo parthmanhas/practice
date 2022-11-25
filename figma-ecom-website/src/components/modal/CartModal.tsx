@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Stepper from "../stepper/Stepper";
 import { MdCancel } from "react-icons/md";
 import { GrClose } from "react-icons/gr";
 import Coupon from "../coupon/Coupon";
+import { getItemsFromCart } from "../../shared/StateManagement";
 
-const Container = styled.div`
-`;
+const Container = styled.div``;
 
-const CartModalContainer = styled.div`
+const CartModalContainer = styled.div<{ emptyCart?: boolean }>`
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -15,15 +15,22 @@ const CartModalContainer = styled.div`
   z-index: 99;
   width: 25vw;
   opacity: 1;
-  background-color: ${(props) => props.theme.colors.bright};
   padding: 1rem;
   margin: 1rem;
+  background-color: ${(props) =>
+    props.emptyCart ? props.theme.colors.grey : props.theme.colors.bright};
+    border: 1px solid ${props => props.theme.colors.primary};
 `;
 
-const Top = styled.div`
+const Top = styled.div<ITop>`
   display: flex;
-  justify-content: end;
+  justify-content: ${(props) => (props.emptyCart ? "space-between" : "end")};
+  background-color: ${(props) => props.emptyCart ? props.theme.colors.accent : 'inherit'};
 `;
+
+interface ITop {
+  emptyCart?: boolean;
+}
 const Items = styled.div``;
 const Total = styled.div`
   margin: 1rem 0;
@@ -100,71 +107,74 @@ const TotalAmountContainer = styled.div`
   justify-content: space-between;
 `;
 
-const items = [
-  {
-    name: "Coach",
-    description: "Leather Coach Bag",
-    price: "$54.69",
-  },
-  {
-    name: "Coach",
-    description: "Leather Coach Bag",
-    price: "$54.69",
-  },
-];
+const Modal = ({ setShowModal }: { setShowModal: any }) => {
+  const items = getItemsFromCart();
 
-const Modal = ({ setShowModal } : { setShowModal: any }) => {
+  const itemsPresent = items.length > 0;
 
-  return (
-    <Container>
-      <CartModalContainer>
-        <Top>
-          <GrClose onClick={() => setShowModal(false)}/>
-        </Top>
-        <Items>
-          {items.map((item) => (
-            <Item>
-              <ItemImage></ItemImage>
-              <ItemContent>
-                <ItemContentTop>
-                  <ProductName>{item.name}</ProductName>
-                  <Cross onClick={() => setShowModal(false)}>
-                    <MdCancel />
-                  </Cross>
-                </ItemContentTop>
-                <ItemContentMiddle>
-                  <ProductDescription>{item.description}</ProductDescription>
-                </ItemContentMiddle>
-                <ItemContentBottom>
-                  <Quantity>
-                    <Stepper fontSize={0.75} />
-                  </Quantity>
-                  <Price>{item.price}</Price>
-                </ItemContentBottom>
-              </ItemContent>
-            </Item>
-          ))}
-        </Items>
-        <Total>
-          <SubTotalContainer>
-            <SubTotalext>Subtotal:</SubTotalext>
-            <SubTotalAmount>$54.69</SubTotalAmount>
-          </SubTotalContainer>
-          <TaxContainer>
-            <TaxText>Tax:</TaxText>
-            <TaxAmount>$54.69</TaxAmount>
-          </TaxContainer>
-          <TotalAmountContainer>
-            <TotalText>Total:</TotalText>
-            <TotalAmount>$54.69</TotalAmount>
-          </TotalAmountContainer>
-        </Total>
-        <Coupon></Coupon>
-        <PlaceOrder>Place Order</PlaceOrder>
-        <Bottom>Continue Shopping</Bottom>
-      </CartModalContainer>
-    </Container>
-  );
+  if (itemsPresent) {
+    return (
+      <Container>
+        <CartModalContainer>
+          <Top>
+            <GrClose onClick={() => setShowModal(false)} />
+          </Top>
+          <Items>
+            {items.map((item) => (
+              <Item>
+                <ItemImage></ItemImage>
+                <ItemContent>
+                  <ItemContentTop>
+                    <ProductName>{item.name}</ProductName>
+                    <Cross onClick={() => setShowModal(false)}>
+                      <MdCancel />
+                    </Cross>
+                  </ItemContentTop>
+                  <ItemContentMiddle>
+                    <ProductDescription>{item.description}</ProductDescription>
+                  </ItemContentMiddle>
+                  <ItemContentBottom>
+                    <Quantity>
+                      <Stepper fontSize={0.75} />
+                    </Quantity>
+                    <Price>{item.price}</Price>
+                  </ItemContentBottom>
+                </ItemContent>
+              </Item>
+            ))}
+          </Items>
+          <Total>
+            <SubTotalContainer>
+              <SubTotalext>Subtotal:</SubTotalext>
+              <SubTotalAmount>$54.69</SubTotalAmount>
+            </SubTotalContainer>
+            <TaxContainer>
+              <TaxText>Tax:</TaxText>
+              <TaxAmount>$54.69</TaxAmount>
+            </TaxContainer>
+            <TotalAmountContainer>
+              <TotalText>Total:</TotalText>
+              <TotalAmount>$54.69</TotalAmount>
+            </TotalAmountContainer>
+          </Total>
+          <Coupon></Coupon>
+          <PlaceOrder>Place Order</PlaceOrder>
+          <Bottom>Continue Shopping</Bottom>
+        </CartModalContainer>
+      </Container>
+    );
+  } else {
+    return (
+      <Container>
+        <CartModalContainer emptyCart>
+          <Top emptyCart>
+            <h2>Shopping Cart Empty!</h2>
+            <GrClose onClick={() => setShowModal(false)} />
+          </Top>
+        </CartModalContainer>
+      </Container>
+    );
+  }
 };
 
 export default Modal;

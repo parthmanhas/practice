@@ -1,12 +1,7 @@
-import { BiHeart } from "react-icons/bi";
-import { BsBag } from "react-icons/bs";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import AppFooter from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import Offer from "../../components/offer/Offer";
 import ProductItem from "../../components/product/ProductItem";
-import StarRating from "../../components/stars/StarRating";
-import Stepper from "../../components/stepper/Stepper";
 import Tabs from "../../components/tabs/Tabs";
 
 const Container = styled.div`

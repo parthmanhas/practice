@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { BsHeart, BsPerson, BsSearch } from "react-icons/bs";
 import { BiShoppingBag } from "react-icons/bi";
 import Modal from "../modal/CartModal";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Toast from "../Toast";
 
 const StyledLink = styled(Link)`
   text-decoration: none;

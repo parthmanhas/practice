@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { useState } from "react";
 
 const Container = styled.div``;
@@ -50,18 +50,18 @@ const Tabs = () => {
         {buttonsHeading.map((heading, index) => {
           if (index === activeIndex) {
             return (
-              <Button primary onClick={() => setActiveIndex(index)}>
+              <Button key={index} primary onClick={() => setActiveIndex(index)}>
                 {heading}
               </Button>
             );
           }
-          return <Button onClick={() => setActiveIndex(index)}>{heading}</Button>;
+          return <Button key={index} onClick={() => setActiveIndex(index)}>{heading}</Button>;
         })}
       </Top>
       <Bottom>
         {details.map((detail, index) => {
-          if (index === activeIndex) return <Details display>{detail}</Details>;
-          return <Details>{detail}</Details>;
+          if (index === activeIndex) return <Details key={index} display={true}>{detail}</Details>;
+          return <Details key={index}>{detail}</Details>;
         })}
       </Bottom>
     </Container>

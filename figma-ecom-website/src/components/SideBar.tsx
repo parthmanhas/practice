@@ -1,5 +1,5 @@
 import { RiArrowRightSLine } from "react-icons/ri";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const SidebarContainer = styled.div``;
 const SidebarItemContainer = styled.div`

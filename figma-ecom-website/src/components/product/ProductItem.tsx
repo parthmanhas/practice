@@ -1,11 +1,13 @@
 import { BiHeart } from "react-icons/bi";
 import { BsBag, BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { addToCart, addToWishlist } from "../../shared/StateManagement";
 import Offer from "../offer/Offer";
 import StarRating from "../stars/StarRating";
 import Stepper from "../stepper/Stepper";
+import Toast from "../Toast";
+import { useState } from "react";
 
 const Product = styled.div`
   margin-bottom: 2rem;
@@ -169,16 +171,19 @@ const ProductItem = ({
 }: {
   product: IProductItem;
   stars?: number;
-  layout?: number;
+  layout: number;
 }) => {
+  const [displayToast, setDisplayToast] = useState(false);
 
   const handleAddToBag = () => {
     addToCart(product);
-  }
+    setDisplayToast(true);
+    setTimeout(() => setDisplayToast(false), 1000);
+  };
 
   const handleAddToWishlist = () => {
     addToWishlist(product);
-  }
+  };
 
   const layoutOne = (
     <StyledLink to="/product">
@@ -238,6 +243,12 @@ const ProductItem = ({
           <BiHeart /> Add To Wishlist
         </AddToWishlist>
       </ButtonContainer>
+      {displayToast && (
+        <Toast
+          alwaysDisplay={true}
+          content={"Added To Bag"}
+        ></Toast>
+      )}
     </>
   );
 

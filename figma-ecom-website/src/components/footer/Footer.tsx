@@ -1,6 +1,6 @@
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 interface IAppFooter {
     bright?: boolean;
@@ -86,20 +86,20 @@ const AppFooter = () => {
       <Left>
         <List>
           <ListItem bright>{footerItems[0].heading}</ListItem>
-          {footerItems[0].items.map((item) => (
-            <ListItem>{item}</ListItem>
+          {footerItems[0].items.map((item, index) => (
+            <ListItem key={index}>{item}</ListItem>
           ))}
         </List>
         <List>
           <ListItem bright>{footerItems[1].heading}</ListItem>
-          {footerItems[1].items.map((item) => (
-            <ListItem>{item}</ListItem>
+          {footerItems[1].items.map((item, index) => (
+            <ListItem key={index}>{item}</ListItem>
           ))}
         </List>
         <List>
           <ListItem bright>{footerItems[2].heading}</ListItem>
-          {footerItems[2].items.map((item) => (
-            <ListItem>{item}</ListItem>
+          {footerItems[2].items.map((item, index) => (
+            <ListItem key={index}>{item}</ListItem>
           ))}
         </List>
       </Left>

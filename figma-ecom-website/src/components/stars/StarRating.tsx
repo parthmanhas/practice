@@ -1,5 +1,5 @@
 import { BsStarFill, BsStar } from "react-icons/bs";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const StarsContainer = styled.div`
   display: flex;
@@ -20,8 +20,8 @@ const StarRating = ({ stars }: {stars: number}) => {
       <Stars>
         {stars &&
           [0, 0, 0, 0, 0].map((val, index) => {
-            if (index < stars) return <BsStarFill />;
-            return <BsStar />;
+            if (index < stars) return <BsStarFill key={index} />;
+            return <BsStar key={index} />;
           })}
       </Stars>
       <Rating>43 Rating</Rating>

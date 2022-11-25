@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiMinus } from "react-icons/bi";
 import { BsPlus } from "react-icons/bs";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const FilterContainer = styled.div`
   display: flex;
